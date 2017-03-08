@@ -1,4 +1,4 @@
-#include <bits/stdc++.h>
+#include <iostram>
 
 using namespace std;
 
@@ -35,6 +35,11 @@ int front()
 	return head->value;
 }
 
+int back()
+{
+	return tail->value;
+}
+
 void pop()
 {
 	if(!empty())
@@ -56,6 +61,17 @@ int size()
 
 int main()
 {
+	
+	push(5);
+	push(6);
+	push(7);
+	cout << size() << '\n';
+	cout << front() << '\n';
+	cout << back() << "\n\n";
+	pop();
+	cout << size() << '\n';
+	cout << front() << '\n';
+	cout << back() << '\n';
 	
 	return 0;
 }
