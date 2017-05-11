@@ -28,7 +28,6 @@ void inserir(cliente *lista, cliente c, int pos)
         pos++;
     }
     lista[pos] = c;
-    cout << lista[pos].nome << endl; 
     tam++;
 }
 
@@ -57,10 +56,15 @@ void deletar(cliente *lista)
 int main()
 {
     cliente *lista = criar();
-    cliente c;
-    c.nome = "sidney", c.cpf = "123456789";
-    inserir(lista, c, 0);
+    cliente c1, c2, c3;
+    c1.nome = "alguem", c1.cpf = "123456789";
+    inserir(lista, c1, 0);
+    c2.nome = "mais alguem", c2.cpf = "912345678";
+    inserir(lista, c2, 0);
+    c1.nome = "alem de mais alguem", c1.cpf = "891234567";
+    inserir(lista, c3, 0);
     cout << lista[0].nome << '\n';
+    cout << buscar(lista, c2) << '\n';
     cliente r = remover(lista, 0);
     cout << lista[0].nome << '\n';
     deletar(lista);

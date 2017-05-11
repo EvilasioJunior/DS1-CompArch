@@ -36,6 +36,19 @@ void deletar(cliente *lista)
 
 int main()
 {
+    cliente *lista = criar();
+    cliente c1, c2, c3, c4;
+    c1.nome = "alguem", c1.cpf = "123456789";
+    inserir(lista, c1);
+    c2.nome = "mais alguem", c2.cpf = "912345678";
+    inserir(lista, c2);
+    c3 = remover(lista);
+    cout << c3.nome << '\n';
+    c4.nome = "loucura", c4.cpf = "0000000000";
+    inserir(lista, c4);
+    c3 = remover(lista);
+    cout << c3.nome << '\n';
+    deletar(lista);
     
     return 0;
 }
